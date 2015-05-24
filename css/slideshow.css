@@ -52,10 +52,11 @@
 	Slid Show image part
 -----------------------------------------*/ 
 .cb-slideshow li:nth-child(1) span {
-	 background-image: url(../images/2.jpg)
+	 background-image: url(http://placehold.it/1600x900&text=image1);
+	 
 }
 .cb-slideshow li:nth-child(2) span {
-	 background-image: url(../images/3.jpg);
+	 background-image: url(http://placehold.it/1600x900&text=image2);
 	 -webkit-animation-delay: 15s;
 	 -moz-animation-delay: 15s;
 	 -o-animation-delay: 15s;
@@ -63,7 +64,7 @@
 	 animation-delay: 15s;
 }
 .cb-slideshow li:nth-child(3) span {
-	 background-image: url(../images/3.jpg);
+	 background-image: url(http://placehold.it/1600x900&text=image3);
 	 -webkit-animation-delay: 30s;
 	 -moz-animation-delay: 30s;
 	 -o-animation-delay: 30s;
@@ -132,44 +133,8 @@ opacity: 0
 opacity: 0
 }
 }
-@-ms-keyframes imageAnimation {
- 0% {
-opacity: 0;
- -ms-animation-timing-function: ease-in;
-}
-8% {
-opacity: 1;
- -webkit-animation-timing-function: ease-out;
-}
- 42% {
-opacity: 1
-}
- 50% {
-opacity: 0
-}
- 100% {
-opacity: 0
-}
-}
-@keyframes imageAnimation {
- 0% {
-opacity: 0;
- animation-timing-function: ease-in;
-}
-8% {
-opacity: 1;
- -webkit-animation-timing-function: ease-out;
-}
- 42% {
-opacity: 1
-}
- 50% {
-opacity: 0
-}
- 100% {
-opacity: 0
-}
-}
+
+
 
 /* Show at least something when animations not supported */
 .no-cssanimations .cb-slideshow li span {
