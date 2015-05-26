@@ -50,6 +50,9 @@ a {
 	outline:none;
 }
 
+.scrolloff {
+	pointer-events: none;
+}
 
 
 /*----------------------------------------------------
@@ -1318,10 +1321,3 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 		
 	}
 }
-
-
-
-
-
-
-
