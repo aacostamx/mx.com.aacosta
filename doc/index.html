@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="AyudaArmados.css" media="screen" />
+<title>Procedimientos Armados & Activados</title>
+</head>
+
+<body>
+<div class="container" id="wrapper">
+<h1>Documentación Armados & Activados</h2>
+<div class="table-responsive">
+<table id="keywords" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th>Nombre archivo</th>
+      <th>Nombre archivo reversa</th>
+      <th>Nombre sql</th>
+	  <th>Descripción</th>
+    </tr>
+  </thead>
+	<tbody>
+		<tr>
+			<td><strong>ES00151419</strong></td>
+			<td>RES00151419</td>
+			<td>Tabla CATITKCesit</td>
+			<td>Crea la estructura para guardas la informacion de los cesits EKT MX</td>
+		</tr>
+		<tr>
+			<td><strong>PR00151419</strong></td>
+			<td>RPR00151419</td>
+			<td>spConCesitArmYAct</td>
+			<td>Consulta los cesits activos EKT MX</td>
+		</tr>
+		<tr>
+			<td><strong>PR001514191</strong></td>
+			<td>RPR001514191</td>
+			<td>spConSolicitudArmYAct</td>
+			<td>Consulta las solicitudes de armado y activado EKT MX	</td>
+		</tr>
+		<tr>
+			<td><strong>PR001514192</strong></td>
+			<td>RPR001514192</td>
+			<td>spUpdSolicitudArmYAct</td>
+			<td>Actualiza la informacion de la solicitud EKT MX</td>
+		</tr>
+		<tr>
+			<td><strong>PR001514193</strong></td>
+			<td>RPR001514193</td>
+			<td>spUpdCesitArmado</td>
+			<td>Actualiza los CESITs desde el servicio web elaborado por HAZEM (GetTiendaInfo)</td>
+		</tr>
+		<tr>
+			<td><strong>PR001514194</strong></td>
+			<td>RPR001514194</td>
+			<td>spConSolicitudPorSerieArmYAct</td>
+			<td>Consulta la solicitud de armado y activado para un numero de serie EKT MX</td>
+		</tr>
+		<tr>
+			<td><strong>PR001514195</strong></td>
+			<td>RPR001514195</td>
+			<td>spConSolicitudSurtimiento</td>
+			<td>Consulta la solicitud desde el surtimiento si no existe la crea EKT MX</td>
+		</tr>
+		<tr>
+			<td><strong>PR001514196</strong></td>
+			<td>RPR00151419</td>
+			<td>spConSolicitudesVigentes</td>
+			<td>Consulta las solicitudes con menos de 24 hrs que no sean estatus dos</td>
+		</tr>		
+		<tr>
+			<td><strong>AC00151419</strong></td>
+			<td>RAC00151419</td>
+			<td>--</td>
+			<td>Crea los parametros a utilizar y los llena catalogos base EKT MX</td>
+		</tr>
+		<tr>
+			<td><strong>AC001514191</strong></td>
+			<td>RAC001514191</td>
+			<td>--</td>
+			<td>Inserta en el catalogo_generico_main y  catalogo_generico archivo XML</td>
+		</tr>
+		<tr>
+			<td><strong>AC001514193</strong></td>
+			<td>RAC001514193</td>
+			<td>--</td>
+			<td>Inserta enlace al portal Armados y Activados</td>
+		</tr>
+		<tr>
+			<td><strong>AC001514194</strong></td>
+			<td>RAC001514194</td>
+			<td>--</td>
+			<td>Asigna Nuevo Menu Operaciones Italika EKT MX </td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<h2>Procedimientos dependientes</h2>
+<div class="table-responsive">
+<table id="keywords" cellspacing="0" cellpadding="0">
+	  <thead>
+		<tr>
+		  <th>Prefijo</th>
+		  <th>Nombre</th>
+		  <th>Descripción</th>
+		</tr>
+	  </thead>
+	<tbody>
+		<tr>
+			<td><strong>ES</strong></td>
+			<td>vtaITKSolArmado</td>
+			<td>En esta tabla se encuentran las solicitudes de las italikas que serán armadas</td>
+		</tr>
+		<tr>
+			<td><strong>PR</strong></td>
+			<td>spInsITKSolArmado</td>
+			<td>Prodecimiento que inserta en la tabla vtITKSolArmado las solicitudes</td>
+		</tr>
+		<tr>
+			<td><strong>PR</strong></td>
+			<td>spGenReg2842</td>
+			<td>Procedimiento que genera la transacción de la solicitud</td>
+		</tr>
+	</tbody>	
+</table>
+</div>
+ 
+<h2>Prefijos Base de Datos</h2>
+<div class="table-responsive">
+<table id="keywords" cellspacing="0" cellpadding="0">
+	<thead>
+		<tr>
+		  <th>Prefijo</strong></th>
+		  <th>Tipo</th>
+		  <th>Descripción</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>ES</strong></td>
+			<td>Estructura</td>
+			<td>tablas</td>
+		</tr>
+		<tr>
+			<td><strong>PR</strong></td>
+			<td>Procedimientos</td>
+			<td>sp, fun, jobs, etc</td>
+		</tr>
+		<tr>
+			<td><strong>AC</strong></td>
+			<td>Archivo Acción</td>
+			<td>inserts, updates, delete</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<h2>JavaScript & Hojas de estilos</h2>
+<div class="table-responsive">
+<table id="keywords" cellspacing="0" cellpadding="0">
+	<thead>
+		<tr>
+		  <th>Nombre archivo</strong></th>
+		  <th>Tipo</th>
+		  <th>Descripción</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>styleArmadoActivado</strong></td>
+			<td>css</td>
+			<td>Contiene el estilo del portal armados y activados</td>
+		</tr>
+		<tr>
+			<td><strong>demostyle</strong></td>
+			<td>css</td>
+			<td>Contiene el estilo de una sección del portal</td>
+		</tr>		
+		<tr>
+			<td><strong>jquery-ui-1.10.4.custom</strong></td>
+			<td>css</td>
+			<td>Estilo para el datetimepicker (jQuery)</td>
+		</tr>	
+		<tr>
+			<td><strong>ValidacionArmados</strong></td>
+			<td>js</td>
+			<td>Contiene los metodos asignar, cerrar y filtrar fechas de los cesits</td>
+		</tr>			
+		<tr>
+			<td><strong>jquery-1.10.2</strong></td>
+			<td>js</td>
+			<td>Versión de jQuery necesaria para el funcionamiento del portal</td>
+		</tr>
+		<tr>
+			<td><strong>jquery-ui-1.10.4.custom</strong></td>
+			<td>js</td>
+			<td>Versión de jQuery necesaria para el funcionamiento del datetimepicker</td>
+		</tr>		
+	</tbody>	
+</table>
+</div>
+
+</div id="wrapper">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>
